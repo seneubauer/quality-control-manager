@@ -1,0 +1,62 @@
+inspection_records
+-
+record_id PK composite
+item_number varchar(255) FK - item_types.item_number
+drawing_number varchar(255) FK - drawing_types.drawing_id
+gage_id int FK - gages.gage_id
+date_measured datetime
+inspector_id int FK - qc_personnel.employee_id
+operator_id int FK - qc_personnel.employee_id
+disposition boolean
+purchase_order_id int FK - purchase_orders.id
+reciever_number varchar(255)
+job_number varchar(255) FK - job_numbers.job_number
+full_inspect_interval int
+rel_quantity int
+comp_quantity int
+feature_id int
+dimension varchar(255)
+nominal decimal
+usl decimal
+lsl decimal
+
+item_types
+-
+item_number PK varchar(255)
+description varchar(255)
+
+drawing_types
+-
+drawing_id PK composite
+drawing_number varchar(255)
+revision varchar(255)
+description varchar(255)
+
+gages
+-
+gage_id PK serial
+name varchar(255)
+last_calibrated datetime
+description varchar(255)
+
+qc_personnel
+-
+employee_id PK int
+first_name varchar(255)
+last_name varchar(255)
+
+suppliers
+-
+supplier_id PK serial
+name varchar(255)
+
+job_numbers
+-
+job_number PK varchar(255)
+description varchar(255)
+
+purchase_orders
+-
+id PK serial
+supplier_id int FK >- suppliers.supplier_id
+description varchar(255)
