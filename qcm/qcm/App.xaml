@@ -6,28 +6,58 @@
 
 	<Application.Resources>
 
-		<!--  -->
-		<FontFamily x:Key="Font.Default">Segoe UI</FontFamily>
-
-		<!-- Header.Control.Inline -->
-		<Style x:Key="Header.Control.Inline" TargetType="{x:Type TextBlock}">
+		<!-- fonts -->
+		<FontFamily x:Key="Font_Default">Segoe UI</FontFamily>
+		
+		<!-- base colors -->
+		<Color x:Key="Default_Font_Light" R="0" G="0" B="0" A="255"/>
+		<Color x:Key="Window_Header_Background_Light" R="166" G="166" B="166" A="255"/>
+		<Color x:Key="Window_Header_Border_Light" R="166" G="166" B="166" A="255"/>
+		<Color x:Key="Window_Header_Text_Light" R="13" G="13" B="13" A="255"/>
+		
+		<!-- solid brushes -->
+		<SolidColorBrush x:Key="Default_Font_SCB" Color="{DynamicResource Default_Font_Light}"/>
+		
+		<SolidColorBrush x:Key="Window_Header_Background_SCB" Color="{DynamicResource Window_Header_Background_Light}"/>
+		<SolidColorBrush x:Key="Window_Header_Border_SCB" Color="{DynamicResource Window_Header_Border_Light}"/>
+		<SolidColorBrush x:Key="Window_Header_Text_SCB" Color="{DynamicResource Window_Header_Text_Light}"/>
+		
+		<!-- Header_Control_Inline -->
+		<Style x:Key="Header_Control_Inline" TargetType="{x:Type TextBlock}">
+			<Setter Property="Foreground" Value="{DynamicResource Default_Font_SCB}"/>
 			<Setter Property="Margin" Value="3,0,3,0"/>
 			<Setter Property="Padding" Value="0"/>
-			<Setter Property="FontFamily" Value="Segoe UI"/>
+			<Setter Property="FontFamily" Value="{StaticResource Font_Default}"/>
 			<Setter Property="FontSize" Value="16"/>
 			<Setter Property="FontStyle" Value="Normal"/>
 			<Setter Property="HorizontalAlignment" Value="Left"/>
 			<Setter Property="VerticalAlignment" Value="Center"/>
 		</Style>
 		
-		<!-- Text.Input.Inline -->
-		<Style x:Key="Text.Input.Inline" TargetType="{x:Type TextBox}">
+		<!-- Text_Input_Inline -->
+		<Style x:Key="Text_Input_Inline" TargetType="{x:Type TextBox}">
+			<Setter Property="Foreground" Value="{DynamicResource Default_Font_SCB}"/>
 			<Setter Property="Margin" Value="3"/>
 			<Setter Property="Padding" Value="3,0,3,0"/>
-			<Setter Property="FontFamily" Value="Segoe UI"/>
+			<Setter Property="FontFamily" Value="{StaticResource Font_Default}"/>
 			<Setter Property="Background" Value="WhiteSmoke"/>
 			<Setter Property="BorderBrush" Value="DarkGray"/>
 			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+		</Style>
+		
+		<!-- Container_Header_Toggler -->
+		<Style x:Key="Container_Header_Toggler" TargetType="{x:Type ToggleButton}">
+			<Setter Property="Foreground" Value="{DynamicResource Default_Font_SCB}"/>
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="18,0,18,0"/>
+			<Setter Property="FontFamily" Value="{StaticResource Font_Default}"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderBrush" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
 			<Setter Property="HorizontalAlignment" Value="Stretch"/>
 			<Setter Property="VerticalAlignment" Value="Stretch"/>
 			<Setter Property="HorizontalContentAlignment" Value="Left"/>

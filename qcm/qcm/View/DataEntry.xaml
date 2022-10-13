@@ -54,35 +54,37 @@
 									<ColumnDefinition Width="*"/>
 								</Grid.ColumnDefinitions>
 
-								<ToggleButton Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
-											  Margin="0"
-											  Padding="18,0,18,0"
-											  FontFamily="Segoe UI"
-											  FontSize="20"
-											  HorizontalAlignment="Stretch"
-											  VerticalAlignment="Stretch"
-											  HorizontalContentAlignment="Left"
-											  VerticalContentAlignment="Center"
-											  Content="Metadata"/>
+								<ToggleButton Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4">
+									<Style TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource Container_Header_Toggler}">
+										<Style.Triggers>
+											<Trigger Property="IsChecked" Value="True">
+												<Setter Property="Content" Value="Metadata"/>
+											</Trigger>
+											<Trigger Property="IsChecked" Value="False">
+												<Setter Property="Content" Value="Metadata"/>
+											</Trigger>
+										</Style.Triggers>
+									</Style>
+								</ToggleButton>
 
 								<TextBlock Grid.Row="1" Grid.Column="0"
-										   Style="{StaticResource Header.Control.Inline}"
+										   Style="{StaticResource Header_Control_Inline}"
 										   Text="Item Number"/>
 								<TextBlock Grid.Row="2" Grid.Column="0"
-										   Style="{StaticResource Header.Control.Inline}"
+										   Style="{StaticResource Header_Control_Inline}"
 										   Text="Drawing Number"/>
 								<TextBlock Grid.Row="3" Grid.Column="0"
-										   Style="{StaticResource Header.Control.Inline}"
+										   Style="{StaticResource Header_Control_Inline}"
 										   Text="Revision"/>
 
 								<TextBox Grid.Row="1" Grid.Column="1"
-										 Style="{StaticResource Text.Input.Inline}"
+										 Style="{StaticResource Text_Input_Inline}"
 										 Text="9090-909"/>
 								<TextBox Grid.Row="2" Grid.Column="1"
-										 Style="{StaticResource Text.Input.Inline}"
+										 Style="{StaticResource Text_Input_Inline}"
 										 Text="8001616"/>
 								<TextBox Grid.Row="3" Grid.Column="1"
-										 Style="{StaticResource Text.Input.Inline}"
+										 Style="{StaticResource Text_Input_Inline}"
 										 Text="A"/>
 								
 							</Grid>
