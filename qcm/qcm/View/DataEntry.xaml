@@ -1,0 +1,68 @@
+﻿<Window x:Class="qcm.View.DataEntry"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		WindowStyle="None"
+		BorderThickness="0"
+		ResizeMode="NoResize"
+		Title="Data Entry" Height="800" Width="1300">
+	
+	<Border>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="30"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="25"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			
+			<!-- header -->
+			<Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+					Background="LightGray"
+					BorderBrush="Black"
+					BorderThickness="1,1,1,0">
+				
+			</Border>
+
+			<!-- left panel -->
+			<Border Grid.Row="1" Grid.Column="0"
+					Background="LightGray"
+					BorderBrush="Black"
+					BorderThickness="1,0,0,0"
+					Width="150">
+				
+			</Border>
+			
+			<!-- body -->
+			<Border Grid.Row="1" Grid.Column="1"
+					Background="WhiteSmoke"
+					BorderBrush="DarkGray"
+					BorderThickness="1">
+				
+			</Border>
+
+			<!-- right panel -->
+			<Border Grid.Row="1" Grid.Column="2"
+					Background="LightGray"
+					BorderBrush="Black"
+					BorderThickness="0,0,1,0"
+					Width="150">
+
+			</Border>
+
+			<!-- footer -->
+			<Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+					Background="LightGray"
+					BorderBrush="Black"
+					BorderThickness="1,0,1,1">
+				
+			</Border>
+		</Grid>
+	</Border>
+</Window>
